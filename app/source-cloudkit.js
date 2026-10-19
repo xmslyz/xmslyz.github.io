@@ -89,8 +89,10 @@
     for (const database of [container.privateCloudDatabase, container.sharedCloudDatabase]) {
       for (const zone of await bookZones(database)) {
         const records = await fetchZone(database, zone.zoneID);
-        // Strefa bez rekordu `book` to księga usunięta albo niedokończona — pomijamy.
-        if (records.some((r) => r.recordType === "book")) books.push({ records });
+        // Pomijamy strefy bez rekordu `book` (niedokończone) i księgi usunięte
+        // w aplikacji (miękko: `deleted_at` w rekordzie `book`, jak BookRecovery).
+        const book = records.find((r) => r.recordType === "book");
+        if (book && !book.fields.deleted_at?.value) books.push({ records });
       }
     }
     return books;
