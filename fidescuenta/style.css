@@ -36,3 +36,7 @@ p, li { color: var(--text); }
 .muted, footer { color: var(--muted); font-size: 15px; }
 a { color: var(--accent); }
 footer { text-align: center; margin-top: 32px; }
+
+/* Flagi języków: zaznaczony język wyróżniony. */
+nav.lang a[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+section[hidden] { display: none; }
