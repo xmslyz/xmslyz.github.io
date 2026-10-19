@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FidesCuenta Web</title>
+<meta name="description" content="Prototipo de FidesCuenta en el navegador (datos de ejemplo).">
+<link rel="icon" href="../fidescuenta/icon.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="banner">Prototipo — datos de ejemplo, sin conexión a iCloud</div>
+
+<!-- Logowanie (w prototypie przechodzi do danych przykładowych) -->
+<main id="login" class="login">
+  <img src="../fidescuenta/icon.png" alt="" width="72" height="72">
+  <h1>FidesCuenta</h1>
+  <p>Sus libros de la parroquia, también en el navegador.</p>
+  <button id="sign-in" class="apple">Iniciar sesión con Apple</button>
+  <p class="muted">Use el mismo ID de Apple que en su iPhone o Mac.</p>
+</main>
+
+<!-- Aplikacja -->
+<div id="app" class="app" hidden>
+  <aside class="sidebar">
+    <select id="book" aria-label="Libro"></select>
+    <nav>
+      <button data-view="register" class="active">Registro</button>
+      <button data-view="wallets">Carteras</button>
+    </nav>
+    <button id="sign-out" class="link">Cerrar sesión</button>
+  </aside>
+
+  <section class="content">
+    <header class="bar">
+      <h2 id="title">Registro</h2>
+      <div id="month-nav" class="month">
+        <button id="prev" aria-label="Mes anterior">‹</button>
+        <span id="month"></span>
+        <button id="next" aria-label="Mes siguiente">›</button>
+      </div>
+    </header>
+    <div id="view"></div>
+    <footer id="totals" class="totals"></footer>
+  </section>
+</div>
+
+<script src="sample-data.js"></script>
+<script src="ledger.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
