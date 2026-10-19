@@ -1,14 +1,17 @@
-// app.js — widoki prototypu: logowanie, wybór księgi, Registro, Carteras.
-// Źródło danych: loadBooks() — tu dane przykładowe; w wersji z iCloud ta sama
-// funkcja pobierze rekordy przez CloudKit JS (patrz PLAN.md, punkt 2).
+// app.js — widoki: logowanie, wybór księgi, Registro, Carteras.
+// Źródło danych: iCloud przez CloudKit JS (source-cloudkit.js), gdy w config.js
+// jest token API; bez tokenu albo z ?demo w adresie — dane przykładowe.
 
 (function () {
   const $ = (id) => document.getElementById(id);
   const state = { books: [], book: null, view: "register", month: null };
 
   // ── Źródło danych ─────────────────────────────────────────────────────
+  const demo = !window.FCConfig.apiToken || new URLSearchParams(location.search).has("demo");
+
   async function loadBooks() {
-    return window.FCSample.books.map((b) => FCLedger.openBook(b.records));
+    const books = demo ? window.FCSample.books : await FCCloudKit.loadBooks();
+    return books.map((b) => FCLedger.openBook(b.records));
   }
 
   // ── Formatowanie (jak w aplikacji, locale es-EC) ──────────────────────
@@ -88,14 +91,50 @@
   }
 
   // ── Start ─────────────────────────────────────────────────────────────
-  $("sign-in").addEventListener("click", async () => {
-    state.books = await loadBooks();
+  function showStatus(text) {
+    $("status").textContent = text || "";
+    $("status").hidden = !text;
+  }
+
+  async function enter() {
+    showStatus("Cargando sus libros…");
+    try {
+      state.books = await loadBooks();
+    } catch (error) {
+      console.error(error);
+      showStatus("No se pudieron cargar los libros: " + (error.reason || error.message || error));
+      return;
+    }
+    if (!state.books.length) {
+      showStatus("No hay libros en iCloud. Active la sincronización con iCloud en la app del iPhone o Mac.");
+      return;
+    }
+    showStatus("");
     $("book").innerHTML = state.books.map((b, i) => `<option value="${i}">${escape(b.info.name)}</option>`).join("");
     $("login").hidden = true;
     $("app").hidden = false;
     selectBook(0);
-  });
-  $("sign-out").addEventListener("click", () => { $("app").hidden = true; $("login").hidden = false; });
+  }
+
+  function leave() {
+    state.books = [];
+    $("app").hidden = true;
+    $("login").hidden = false;
+  }
+
+  if (demo) {
+    $("banner").hidden = false;
+    $("sign-in").hidden = false;
+    $("sign-out").hidden = false;
+    $("sign-in").addEventListener("click", enter);
+    $("sign-out").addEventListener("click", leave);
+  } else {
+    showStatus("Conectando con iCloud…");
+    FCCloudKit.load(window.FCConfig)
+      .then(() => { showStatus(""); return FCCloudKit.watchAuth(enter, leave); })
+      .catch((error) => { console.error(error); showStatus(error.message || String(error)); });
+  }
+
   $("book").addEventListener("change", (e) => selectBook(Number(e.target.value)));
   document.querySelectorAll("[data-view]").forEach((b) =>
     b.addEventListener("click", () => { state.view = b.dataset.view; render(); }));
