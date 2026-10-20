@@ -6,8 +6,8 @@
 <title>FidesCuenta Web</title>
 <meta name="description" content="FidesCuenta en el navegador: sus libros de iCloud.">
 <link rel="icon" href="/fidescuenta/icon.png">
-  <script type="module" crossorigin src="/app/assets/index-Bw39yVZO.js"></script>
-  <link rel="stylesheet" crossorigin href="/app/assets/index-BH9KAJlY.css">
+  <script type="module" crossorigin src="/app/assets/index-D2cnHd2u.js"></script>
+  <link rel="stylesheet" crossorigin href="/app/assets/index-C-vp23Y2.css">
 </head>
 <body>
 <!-- Przyciski Apple rysuje biblioteka CloudKit JS w tych elementach. Trzymamy je poza
@@ -17,5 +17,47 @@
   <div id="apple-sign-out-button"></div>
 </div>
 <div id="root"></div>
+<!-- Stara przeglądarka (np. iPad z iOS 12): pakiet strony używa BigInt i składni ES2020,
+     więc Safari < 14 nawet go nie wczyta i zostałby pusty ekran, wyglądający jak awaria.
+     Ten skrypt jest celowo w starym JavaScripcie (ES5): sprawdza, czego strona potrzebuje,
+     i zamiast pustego ekranu pokazuje komunikat w języku przeglądarki. -->
+<script>
+(function () {
+  var c = window.crypto;
+  // crypto.randomUUID jest od Safari 15.4 — zastępujemy je tym samym z getRandomValues (UUID v4),
+  // dzięki czemu wystarcza Safari 14.
+  if (c && c.getRandomValues && !c.randomUUID) {
+    c.randomUUID = function () {
+      var b = c.getRandomValues(new Uint8Array(16)), h = [], i;
+      b[6] = (b[6] & 15) | 64; b[8] = (b[8] & 63) | 128;
+      for (i = 0; i < 16; i++) h.push((b[i] + 256).toString(16).slice(1));
+      return h.slice(0, 4).join("") + "-" + h.slice(4, 6).join("") + "-" + h.slice(6, 8).join("") + "-" +
+             h.slice(8, 10).join("") + "-" + h.slice(10).join("");
+    };
+  }
+  var ok = typeof BigInt === "function" && typeof Promise === "function" && typeof fetch === "function" &&
+           !!window.indexedDB && !!(c && c.getRandomValues) && "noModule" in document.createElement("script");
+  if (ok) return;
+  window.__fcUnsupported = true;
+  var lang = (navigator.language || "es").slice(0, 2).toLowerCase();
+  var t = {
+    es: ["Su navegador es demasiado antiguo",
+         "FidesCuenta Web necesita iOS / iPadOS 14 o posterior, o una versión actual de Safari, Chrome, Edge o Firefox.",
+         "Este dispositivo no puede abrir la página. Use otro dispositivo más reciente (iPad, iPhone, Mac o PC)."],
+    en: ["Your browser is too old",
+         "FidesCuenta Web needs iOS / iPadOS 14 or later, or a current version of Safari, Chrome, Edge or Firefox.",
+         "This device cannot open the page. Please use a newer device (iPad, iPhone, Mac or PC)."],
+    pl: ["Przeglądarka jest zbyt stara",
+         "FidesCuenta Web wymaga iOS / iPadOS 14 lub nowszego albo aktualnej wersji Safari, Chrome, Edge lub Firefoxa.",
+         "To urządzenie nie otworzy strony. Użyj nowszego urządzenia (iPad, iPhone, Mac albo PC)."]
+  }[lang === "en" || lang === "pl" ? lang : "es"];
+  document.getElementById("root").innerHTML =
+    '<div style="max-width:520px;margin:15vh auto;padding:0 24px;font-family:-apple-system,Helvetica,Arial,sans-serif;color:#222;text-align:center">' +
+    '<img src="/fidescuenta/icon.png" alt="" width="72" height="72" style="border-radius:16px">' +
+    '<h1 style="font-size:22px;margin:16px 0 8px">' + t[0] + '</h1>' +
+    '<p style="font-size:16px;line-height:1.5;margin:0 0 8px">' + t[1] + '</p>' +
+    '<p style="font-size:15px;line-height:1.5;color:#666;margin:0">' + t[2] + '</p></div>';
+})();
+</script>
 </body>
 </html>
