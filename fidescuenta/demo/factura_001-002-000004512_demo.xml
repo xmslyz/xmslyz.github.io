@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>DEPORTES EJEMPLO S.A.</razonSocial>
+    <nombreComercial>DEPORTES EJEMPLO</nombreComercial>
+    <ruc>0990000000101</ruc>
+    <claveAcceso>2010202601099000000010120010020000045121234567819</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>002</ptoEmi>
+    <secuencial>000004512</secuencial>
+    <dirMatriz>AV. EJEMPLO 123, GUAYAQUIL</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>20/10/2026</fechaEmision>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>CLUB DEPORTIVO DEMO</razonSocialComprador>
+    <identificacionComprador>0990000000099</identificacionComprador>
+    <totalSinImpuestos>39.56</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto><codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><baseImponible>39.56</baseImponible><valor>5.94</valor></totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>45.50</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos><pago><formaPago>01</formaPago><total>45.50</total></pago></pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>BF-05</codigoPrincipal>
+      <descripcion>BALON DE FUTBOL N.5</descripcion>
+      <cantidad>2.00</cantidad>
+      <precioUnitario>15.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>30.00</precioTotalSinImpuesto>
+      <impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><tarifa>15</tarifa><baseImponible>30.00</baseImponible><valor>4.50</valor></impuesto></impuestos>
+    </detalle>
+    <detalle>
+      <codigoPrincipal>IN-01</codigoPrincipal>
+      <descripcion>INFLADOR DE MANO</descripcion>
+      <cantidad>1.00</cantidad>
+      <precioUnitario>9.560000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>9.56</precioTotalSinImpuesto>
+      <impuestos><impuesto><codigo>2</codigo><codigoPorcentaje>4</codigoPorcentaje><tarifa>15</tarifa><baseImponible>9.56</baseImponible><valor>1.44</valor></impuesto></impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Email">ventas@ejemplo.invalid</campoAdicional>
+  </infoAdicional>
+</factura>
