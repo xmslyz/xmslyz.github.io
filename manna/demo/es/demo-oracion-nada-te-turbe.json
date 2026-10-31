@@ -1,0 +1,17 @@
+{
+  "format": 1,
+  "id": "demo_nada_te_turbe",
+  "kind": "",
+  "title": "Nada te turbe (Santa Teresa de Jesús) — demo",
+  "group": "Modlitwy",
+  "order": 900,
+  "meta": "Santa Teresa de Jesús († 1582), letrilla; dominio público. Archivo de demostración para la revisión de Manna.",
+  "note": "Ejemplo de oración para importar: Ajustes > Importar contenido propio. Aparecerá en la pestaña Oraciones.",
+  "parts": [
+    {
+      "heading": "Nada te turbe",
+      "text": "Nada te turbe,\nnada te espante;\ntodo se pasa,\nDios no se muda.\nLa paciencia\ntodo lo alcanza;\nquien a Dios tiene\nnada le falta:\nsolo Dios basta.",
+      "style": "verse"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "format": 1,
+  "id": "demo_triduum_jozef",
+  "kind": "novena",
+  "title": "Trzydniowe nabożeństwo do św. Józefa w nagłej potrzebie",
+  "group": "Nowenny",
+  "order": 900,
+  "days": 3,
+  "meta": "Tekst dostarczony przez autora Manny (ks. Maciej Słyż) jako plik demonstracyjny dla recenzji.",
+  "note": "Trzy dni, jedna modlitwa dziennie. Rozpocznij modlitwę, wybierz godzinę przypomnienia; dzień X z 3 pojawi się w „Nadchodzące” i w widżetach. Plik demo.",
+  "opening": [
+    {
+      "heading": "Znak krzyża",
+      "text": "W imię Ojca i Syna, i Ducha Świętego. Amen."
+    }
+  ],
+  "daily": {
+    "1": [
+      {
+        "heading": "Dzień pierwszy",
+        "text": "Najukochańszy Oblubieńcze Maryi, zawsze Dziewicy, najdroższy mój Patronie święty Józefie, do Ciebie się uciekam w tej tak trudnej mojej sprawie, przypominając Ci siedem boleści, którymi było przejęte na ziemi twoje serce. Błagam Cię, racz mi uprosić pożądaną łaskę i pocieszyć przez pamięć na tę radość ducha, gdy Maryja Niepokalana otaczała Cię swoją obecnością i troskliwością przy Twoim skonaniu. Przemów dziś do Niej za mną, aby przez miłość, jaką masz ku Niej, ulitowała się nade mną i pocieszyła mnie w tym nieszczęściu.",
+        "style": "prose"
+      },
+      {
+        "heading": "Ojcze nasz, Zdrowaś Maryjo",
+        "text": "Ojcze nasz… Zdrowaś Maryjo…",
+        "style": "rubric"
+      }
+    ],
+    "2": [
+      {
+        "heading": "Dzień drugi",
+        "text": "Najmiłościwszy Opiekunie Jezusa, naszego Odkupiciela, uciekam się do Ciebie, przedstawiając Ci tę moją prośbę. Błagam Cię przez te pociechy, którymi opływało tu na ziemi Twoje serce, kiedy Jezus swą miłosną obecnością otoczył Cię w chwili Twego zgonu. O święty mój Patronie, wyjednaj mi pożądaną łaskę i przemów za mną do Jezusa, aby przez tę miłość dla Niego, jaką było przepełnione Twoje serce, ulitował się nade mną i pocieszył mnie w tym utrapieniu.",
+        "style": "prose"
+      },
+      {
+        "heading": "Ojcze nasz, Zdrowaś Maryjo",
+        "text": "Ojcze nasz… Zdrowaś Maryjo…",
+        "style": "rubric"
+      }
+    ],
+    "3": [
+      {
+        "heading": "Dzień trzeci",
+        "text": "Najmiłościwszy Przedstawicielu Trójcy ziemskiej, mój najdroższy Opiekunie, który jesteś obdarzony w Niebie szczególnymi łaskami, oddaję Ci tę tak ważną dla mnie sprawę prosząc Cię, o święty mój Patronie, przez pamięć na tę wielką chwałę, którą otoczyła Cię Trójca Przenajświętsza po Twoim odejściu z tej doliny płaczu do nieba. Racz mnie Jej przedstawić i uprosić mi tę łaskę, przez wzgląd na najgłębszą cześć, którą Ty Jej oddawałeś tu na ziemi, aby raczyła ulitować się nade mną i pocieszyć mnie w tym moim nieszczęściu.",
+        "style": "prose"
+      },
+      {
+        "heading": "Ojcze nasz, Zdrowaś Maryjo",
+        "text": "Ojcze nasz… Zdrowaś Maryjo…",
+        "style": "rubric"
+      }
+    ]
+  },
+  "closing": []
+}

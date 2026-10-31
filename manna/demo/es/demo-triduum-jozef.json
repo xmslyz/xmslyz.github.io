@@ -1,0 +1,56 @@
+{
+  "format": 1,
+  "id": "demo_triduum_jose",
+  "kind": "novena",
+  "title": "Triduo a san José en una necesidad urgente",
+  "group": "Nowenny",
+  "order": 900,
+  "days": 3,
+  "meta": "Texto facilitado por el autor de Manna (P. Maciej Słyż) como archivo de demostración; traducción de trabajo al español, pendiente de revisión.",
+  "note": "Tres días, una oración cada día. Inicie la oración y elija la hora del recordatorio; el día X de 3 aparecerá en «Próximamente» y en los widgets. Archivo de demostración.",
+  "opening": [
+    {
+      "heading": "Señal de la cruz",
+      "text": "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
+    }
+  ],
+  "daily": {
+    "1": [
+      {
+        "heading": "Primer día",
+        "text": "Amadísimo Esposo de María, siempre Virgen, queridísimo Patrono mío san José, a ti acudo en este asunto mío tan difícil, recordándote los siete dolores que traspasaron tu corazón en la tierra. Te ruego que te dignes alcanzarme la gracia que deseo y consolarme, por la memoria de aquel gozo del espíritu cuando María Inmaculada te rodeó con su presencia y sus cuidados en tu tránsito. Habla hoy a ella por mí, para que, por el amor que le tienes, se compadezca de mí y me consuele en esta desgracia.",
+        "style": "prose"
+      },
+      {
+        "heading": "Padre nuestro, Ave María",
+        "text": "Padre nuestro… Ave María…",
+        "style": "rubric"
+      }
+    ],
+    "2": [
+      {
+        "heading": "Segundo día",
+        "text": "Clementísimo Protector de Jesús, nuestro Redentor, acudo a ti presentándote esta petición mía. Te suplico por aquellos consuelos de los que rebosó tu corazón aquí en la tierra, cuando Jesús te rodeó con su amorosa presencia en la hora de tu muerte. Oh santo Patrono mío, alcánzame la gracia que deseo e intercede por mí ante Jesús, para que, por el amor a él del que estuvo lleno tu corazón, se compadezca de mí y me consuele en esta aflicción.",
+        "style": "prose"
+      },
+      {
+        "heading": "Padre nuestro, Ave María",
+        "text": "Padre nuestro… Ave María…",
+        "style": "rubric"
+      }
+    ],
+    "3": [
+      {
+        "heading": "Tercer día",
+        "text": "Clementísimo Representante de la Trinidad terrena, queridísimo Protector mío, enriquecido en el cielo con gracias singulares, te encomiendo este asunto tan importante para mí, pidiéndote, oh santo Patrono mío, por la memoria de la gran gloria con que te rodeó la Santísima Trinidad cuando dejaste este valle de lágrimas para ir al cielo. Dígnate presentarme a ella y alcanzarme esta gracia, en atención al profundísimo culto que tú le rendiste aquí en la tierra, para que se digne compadecerse de mí y consolarme en esta mi desgracia.",
+        "style": "prose"
+      },
+      {
+        "heading": "Padre nuestro, Ave María",
+        "text": "Padre nuestro… Ave María…",
+        "style": "rubric"
+      }
+    ]
+  },
+  "closing": []
+}

@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "id": "demo_bogurodzica",
+  "kind": "",
+  "title": "Bogurodzica (pieśń staropolska) — demo",
+  "group": "Modlitwy",
+  "order": 900,
+  "meta": "Anonimowa pieśń staropolska, XIII–XV w. (zapis z 1407); domena publiczna. Plik demonstracyjny dla recenzji Manny.",
+  "note": "Przykład modlitwy do wczytania: Ustawienia → Importuj własne treści. Pojawi się w zakładce Modlitwy.",
+  "parts": [
+    {
+      "heading": "Bogurodzica",
+      "text": "Bogurodzica dziewica, Bogiem sławiena Maryja,\nu twego syna Gospodzina matko zwolena, Maryja!\nZyszczy nam, spuści nam.\nKyrieleison.",
+      "style": "verse"
+    },
+    {
+      "heading": "Zwrotka druga",
+      "text": "Twego dziela Chrzciciela, bożycze,\nusłysz głosy, napełń myśli człowiecze.\nSłysz modlitwę, jąż nosimy,\na dać raczy, jegoż prosimy:\na na świecie zbożny pobyt,\npo żywocie rajski przebyt.\nKyrieleison.",
+      "style": "verse"
+    }
+  ]
+}
