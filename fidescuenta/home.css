@@ -79,8 +79,12 @@ body.home a.manna .go { flex: none; padding: 7px 14px; border-radius: 999px; bor
   color: #e8909c; font-weight: 600; font-size: 14px; }
 body.home a.manna:hover .go { background: #e8909c; color: #1a090d; }
 @media (max-width: 560px) {
-  body.home a.manna { flex-wrap: wrap; padding: 14px; }
-  body.home a.manna img { width: 52px; height: 52px; }
-  body.home a.manna > span:nth-of-type(1) { flex-basis: calc(100% - 70px); }
-  body.home a.manna .go { margin-left: 68px; }
+  /* Na telefonie jeden wiersz: ikona, nazwa z opisem i sama strzałka „›” (jak karta FidesCuenta u Manny). */
+  body.home a.manna { gap: 12px; padding: 12px 14px; }
+  body.home a.manna img { width: 44px; height: 44px; border-radius: 10px; }
+  body.home a.manna strong { font-size: 16px; }
+  body.home a.manna strong + span { display: block; font-size: 13px; line-height: 1.3; margin-top: 2px; }
+  body.home a.manna .go { padding: 0; border: 0; font-size: 0; }
+  body.home a.manna .go::after { content: "›"; font-size: 26px; font-weight: 700; color: #e8909c; }
+  body.home a.manna:hover .go { background: none; }
 }
