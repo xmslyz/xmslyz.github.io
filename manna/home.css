@@ -34,4 +34,16 @@ body.home footer { color: #a98f93; }
   body.home .body { margin: 28px -8px 0; padding: 8px 18px 22px; }
 }
 
-body.home .more { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(74,15,26,.15); font-size: 15px; }
+/* Inne projekty autora */
+body.home .more { margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(74,15,26,.15); }
+body.home .more-h { margin: 0 0 12px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #7d1f2e; font-weight: 600; }
+body.home .proj { display: flex; align-items: center; gap: 16px; padding: 14px 18px; border-radius: 18px;
+  background: #1a090d; color: #f4edd8; text-decoration: none; box-shadow: 0 8px 24px rgba(26,9,13,.25);
+  transition: transform .15s ease, box-shadow .15s ease; }
+body.home .proj:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(26,9,13,.35); }
+body.home .proj img { width: 64px; height: 64px; border-radius: 14px; flex: none; }
+body.home .proj-t { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+body.home .proj-t strong { font-size: 19px; color: #fff; }
+body.home .proj-t span { font-size: 14px; color: #d9c9cb; line-height: 1.35; }
+body.home .proj-b { flex: none; padding: 8px 14px; border-radius: 999px; border: 1px solid #e8909c; color: #e8909c; font-size: 14px; font-weight: 600; }
+@media (max-width: 480px) { body.home .proj { flex-wrap: wrap; } body.home .proj-t { flex: 1 1 calc(100% - 80px); } body.home .proj-b { margin-left: 80px; } }
