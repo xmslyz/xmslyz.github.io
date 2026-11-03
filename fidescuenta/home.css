@@ -1,0 +1,65 @@
+/* Strona główna FidesCuenta jako reklama — ten sam język co grafika reklamowa
+   (AppStore/reklama/whatsapp.html): grafit #151515, limonka #e3fc1a, ikona z nazwą,
+   hasło z wyróżnieniem, trzy przechylone telefony i limonkowy pas z przyciskiem App Store. */
+body.home { background: #151515; color: #fff; }
+body.home main { max-width: 900px; padding-top: 20px; }
+body.home nav.lang { justify-content: flex-end; margin: 0 0 8px; }
+body.home nav.lang a { color: #ddd; border-color: #333; }
+body.home nav.lang a[aria-pressed="true"] { border-color: #e3fc1a; color: #e3fc1a; }
+body.home section { background: transparent; border: 0; padding: 0; margin: 0; }
+
+/* Reklama: poświata limonki za telefonami. */
+body.home .ad { position: relative; overflow: hidden; border-radius: 28px; background: #151515; }
+body.home .ad::before { content: ""; position: absolute; width: 760px; height: 760px; border-radius: 50%;
+  left: 50%; top: 300px; transform: translateX(-50%);
+  background: radial-gradient(circle, #e3fc1a33, transparent 65%); pointer-events: none; }
+body.home .brand { display: flex; align-items: center; gap: 18px; padding: 24px 24px 0; position: relative; }
+body.home .brand img { width: 76px; height: 76px; border-radius: 18px; background: #fff; }
+body.home .brand strong { display: block; font-size: clamp(30px, 6vw, 44px); font-weight: 800; letter-spacing: -1px; line-height: 1.05; }
+body.home .brand span { color: #bbb; font-size: 17px; }
+body.home h1 { position: relative; padding: 0 24px; margin: 28px 0 0; font-size: clamp(30px, 6.4vw, 52px);
+  line-height: 1.08; letter-spacing: -1px; font-weight: 800; color: #fff; }
+body.home h1 b { color: #e3fc1a; }
+
+/* Telefony: środkowy prosto i na wierzchu, boczne przechylone. */
+body.home .phones { position: relative; display: flex; justify-content: center; align-items: flex-start;
+  padding: 40px 12px 0; margin-bottom: -60px; }
+body.home .phones img { width: 31%; max-width: 250px; display: block; border: 6px solid #000; border-radius: 30px;
+  box-shadow: 0 24px 60px #000b; background: #fff; }
+body.home .phones img:nth-child(1) { transform: rotate(-6deg) translate(12%, 34px); }
+body.home .phones img:nth-child(2) { position: relative; z-index: 2; }
+body.home .phones img:nth-child(3) { transform: rotate(6deg) translate(-12%, 34px); }
+
+/* Limonkowy pas na dole reklamy. */
+body.home .band { position: relative; z-index: 3; background: #e3fc1a; color: #111; padding: 28px 24px;
+  box-shadow: 0 -20px 50px #0008; display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center;
+  justify-content: space-between; }
+body.home .band .f1 { font-size: clamp(24px, 4.4vw, 34px); font-weight: 800; line-height: 1.1; }
+body.home .band .f2 { font-size: 16px; font-weight: 500; margin-top: 4px; }
+body.home .band .cta { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+body.home .store { line-height: 0; }
+body.home .store img { height: 48px; width: auto; display: block; }
+body.home .web { display: inline-flex; align-items: center; height: 48px; padding: 0 18px; border-radius: 12px;
+  border: 2px solid #111; color: #111; font-weight: 700; font-size: 15px; text-decoration: none; }
+body.home .web:hover { background: #111; color: #e3fc1a; }
+
+/* Pod reklamą: zwykła karta strony FidesCuenta (style.css), tylko ciemna. */
+body.home .body { margin-top: 28px; background: #1d1d1f; border: 1px solid #2e2e31; border-radius: 18px; padding: 8px 24px 24px; }
+body.home .body h2 { color: #fff; font-size: 21px; margin: 22px 0 6px; }
+body.home .body p, body.home .body li { color: #e8e8ea; }
+body.home .body strong { color: #e3fc1a; font-weight: 600; }
+body.home .body a { color: #e3fc1a; }
+body.home .body .muted, body.home .body figcaption { color: #a8a8ad; }
+body.home .body .clips video { border-color: #2e2e31; }
+body.home .links { margin-top: 20px; font-weight: 600; }
+body.home footer { color: #8a8a8f; }
+
+@media (max-width: 560px) {
+  body.home .brand { padding: 18px 16px 0; }
+  body.home .brand img { width: 60px; height: 60px; border-radius: 14px; }
+  body.home h1 { padding: 0 16px; }
+  body.home .phones { padding-top: 28px; margin-bottom: -40px; }
+  body.home .phones img { border-width: 3px; border-radius: 16px; }
+  body.home .band { padding: 22px 16px; }
+  body.home .body { padding: 4px 16px 18px; }
+}
