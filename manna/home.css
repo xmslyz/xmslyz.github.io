@@ -33,3 +33,5 @@ body.home footer { color: #a98f93; }
   body.home .shots figure:nth-child(2) { margin-top: 18px; }
   body.home .body { margin: 28px -8px 0; padding: 8px 18px 22px; }
 }
+
+body.home .more { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(74,15,26,.15); font-size: 15px; }
