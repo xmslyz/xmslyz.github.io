@@ -1,0 +1,35 @@
+/* Strona główna Manna: hero w stylu reklamy (bordo #1a090d, poświata #7d1f2e, róż #e8909c, krem #f4edd8). */
+body.home { background: #1a090d; color: #f4edd8; }
+body.home main { max-width: 860px; }
+body.home nav.lang a { color: #f4edd8; border-color: #5a2a33; }
+body.home nav.lang a[aria-pressed="true"] { border-color: #e8909c; color: #e8909c; }
+body.home section { background: transparent; border: 0; padding: 0; margin: 0; }
+body.home .hero { text-align: center; padding: 32px 8px 8px; position: relative;
+  background: radial-gradient(ellipse at 50% 18%, #7d1f2ecc, transparent 62%); }
+body.home .logo { width: 84px; height: 84px; border-radius: 22%; box-shadow: 0 8px 28px #0009; }
+body.home h1 { font-size: clamp(32px, 7vw, 54px); line-height: 1.08; letter-spacing: -1px; font-weight: 800; margin: 18px 0 8px; color: #fff; }
+body.home h1 b { color: #e8909c; }
+body.home .sub { color: #cdb9b9; font-size: 19px; margin: 0 0 22px; }
+body.home .cta { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; margin: 0 0 12px; }
+body.home .store { display: inline-block; line-height: 0; }
+body.home .store img { height: 48px; width: auto; display: block; }
+body.home .soon { display: inline-flex; align-items: center; height: 48px; padding: 0 18px; border-radius: 999px;
+  border: 1.5px dashed #e8909c; color: #e8909c; font-weight: 600; font-size: 16px; }
+body.home .perks { color: #cdb9b9; font-size: 15px; margin: 0 0 26px; }
+body.home .shots { display: flex; justify-content: center; gap: 14px; align-items: flex-start; }
+body.home .shots figure { margin: 0; flex: 1 1 0; max-width: 230px; }
+body.home .shots figure:nth-child(2) { margin-top: 28px; }
+body.home .shots img { width: 100%; height: auto; display: block; border: 5px solid #000; border-radius: 22px;
+  box-shadow: 0 20px 50px #000a; background: #fff; }
+body.home .body { background: #f4edd8; color: #2a0f15; margin: 36px -16px 0; padding: 12px 24px 28px; border-radius: 18px; }
+body.home .body h2 { color: #4a0f1a; font-size: 21px; margin: 22px 0 6px; }
+body.home .body p, body.home .body li { color: #2a0f15; }
+body.home .body a { color: #7d1f2e; }
+body.home .links { margin-top: 20px; font-weight: 600; }
+body.home footer { color: #a98f93; }
+@media (max-width: 520px) {
+  body.home .shots { gap: 8px; }
+  body.home .shots img { border-width: 3px; border-radius: 14px; }
+  body.home .shots figure:nth-child(2) { margin-top: 18px; }
+  body.home .body { margin: 28px -8px 0; padding: 8px 18px 22px; }
+}
