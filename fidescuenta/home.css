@@ -63,3 +63,24 @@ body.home footer { color: #8a8a8f; }
   body.home .band { padding: 22px 16px; }
   body.home .body { padding: 4px 16px 18px; }
 }
+
+/* Na dole: reklama Manny w jej własnych kolorach (bordo #1a090d, róż #e8909c, krem #f4edd8). */
+body.home .more { margin-top: 22px; padding-top: 16px; border-top: 1px solid #2e2e31; }
+body.home .more-label { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #a8a8ad; }
+body.home a.manna { display: flex; align-items: center; gap: 16px; padding: 14px 18px; border-radius: 16px;
+  background: radial-gradient(ellipse at 15% 0%, #7d1f2e99, transparent 70%), #1a090d;
+  border: 1px solid #5a2a33; color: #f4edd8; text-decoration: none; }
+body.home a.manna img { width: 64px; height: 64px; border-radius: 14px; flex: none; box-shadow: 0 6px 18px #0008; }
+body.home a.manna > span:nth-of-type(1) { flex: 1; line-height: 1.35; }
+body.home a.manna strong { display: block; color: #fff; font-size: 19px; font-weight: 700; }
+body.home a.manna strong + span { color: #cdb9b9; font-size: 15px; }
+body.home a.manna .go { flex: none; padding: 7px 14px; border-radius: 999px; border: 1.5px solid #e8909c;
+  color: #e8909c; font-weight: 600; font-size: 14px; }
+body.home a.manna:hover .go { background: #e8909c; color: #1a090d; }
+@media (max-width: 560px) {
+  body.home a.manna { flex-wrap: wrap; padding: 14px; }
+  body.home a.manna img { width: 52px; height: 52px; }
+  body.home a.manna > span:nth-of-type(1) { flex-basis: calc(100% - 70px); }
+  body.home a.manna .go { margin-left: 68px; }
+}
