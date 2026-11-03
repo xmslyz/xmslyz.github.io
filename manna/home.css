@@ -46,4 +46,11 @@ body.home .proj-t { display: flex; flex-direction: column; gap: 2px; flex: 1; mi
 body.home .proj-t strong { font-size: 19px; color: #fff; }
 body.home .proj-t span { font-size: 14px; color: #d9c9cb; line-height: 1.35; }
 body.home .proj-b { flex: none; padding: 8px 14px; border-radius: 999px; border: 1px solid #e8909c; color: #e8909c; font-size: 14px; font-weight: 600; }
-@media (max-width: 480px) { body.home .proj { flex-wrap: wrap; } body.home .proj-t { flex: 1 1 calc(100% - 80px); } body.home .proj-b { margin-left: 80px; } }
+@media (max-width: 600px) {
+  body.home .proj { gap: 12px; padding: 12px 14px; border-radius: 16px; }
+  body.home .proj img { width: 44px; height: 44px; border-radius: 10px; }
+  body.home .proj-t strong { font-size: 16px; }
+  body.home .proj-t span { font-size: 13px; }
+  body.home .proj-b { padding: 0; border: 0; font-size: 0; }
+  body.home .proj-b::after { content: "›"; font-size: 26px; line-height: 1; color: #e8909c; }
+}
