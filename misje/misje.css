@@ -1,0 +1,32 @@
+/* Misje pod równikiem — ten sam styl co strona Manny (bordo, krem). */
+body.home { background: #1a090d; color: #f4edd8; }
+body.home main { max-width: 860px; }
+body.home nav.lang a { color: #f4edd8; border-color: #5a2a33; }
+body.home nav.lang a[aria-pressed="true"] { border-color: #e8909c; color: #e8909c; }
+body.home section { background: transparent; border: 0; padding: 0; margin: 0; }
+body.home .hero { text-align: center; padding: 32px 8px 8px;
+  background: radial-gradient(ellipse at 50% 18%, #7d1f2ecc, transparent 62%); }
+body.home .logo { width: 190px; height: 190px; border-radius: 50%; background: #f4edd8; padding: 6px; box-shadow: 0 8px 28px #0009; }
+body.home h1 { font-size: clamp(32px, 7vw, 52px); line-height: 1.1; letter-spacing: -1px; font-weight: 800; margin: 18px 0 8px; color: #fff; }
+body.home h1 b { color: #e8909c; }
+body.home .sub { color: #cdb9b9; font-size: 19px; margin: 0 0 22px; }
+body.home .body { background: #f4edd8; color: #2a0f15; margin: 28px -16px 0; padding: 12px 24px 28px; border-radius: 18px; }
+body.home .body h2 { color: #4a0f1a; font-size: 21px; margin: 22px 0 6px; }
+body.home .body p, body.home .body li { color: #2a0f15; }
+body.home .body a { color: #7d1f2e; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 12px 0; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: auto; border-radius: 12px; display: block; }
+.gallery figcaption { font-size: 14px; color: #6b4a50; margin-top: 4px; }
+.help { list-style: none; padding: 0; margin: 8px 0; }
+.help li { padding: 12px 14px; margin-bottom: 10px; background: #fff8; border: 1px solid #d9cdb0; border-radius: 12px; }
+.help li:first-child { border-color: #7d1f2e; background: #fff; }
+.help strong { color: #4a0f1a; }
+.btn { display: inline-block; margin: 6px 8px 0 0; padding: 8px 18px; border-radius: 999px; background: #7d1f2e;
+  color: #fff !important; text-decoration: none; font-weight: 600; font-size: 16px; }
+body.home .body .btn { color: #fff; }
+.manna { margin-top: 24px; padding: 14px 16px; border-radius: 12px; background: #4a0f1a; color: #f4edd8; }
+body.home .body .manna a { color: #e8909c; font-weight: 600; }
+body.home .body .manna p { color: #f4edd8; margin: 0; }
+body.home footer { color: #a98f93; }
+@media (max-width: 520px) { body.home .body { margin: 28px -8px 0; padding: 8px 16px 24px; } }
