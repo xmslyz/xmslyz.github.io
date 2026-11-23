@@ -46,3 +46,7 @@ body.home footer { color: #a98f93; }
 .project strong{display:block;font-size:1.08em}
 .project span{font-size:.92em;color:#5f5a55}
 .project span strong{color:#5a1420}
+
+body.home .logo { display: block; box-sizing: border-box; width: 116px; height: 116px; margin: 0 auto; padding: 4px; object-fit: contain; }
+body.home .hero { padding-top: 12px; }
+.wa-card img { width: 60px; height: 60px; object-fit: contain; }
