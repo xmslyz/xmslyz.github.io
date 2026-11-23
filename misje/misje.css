@@ -30,3 +30,9 @@ body.home .body .manna a { color: #e8909c; font-weight: 600; }
 body.home .body .manna p { color: #f4edd8; margin: 0; }
 body.home footer { color: #a98f93; }
 @media (max-width: 520px) { body.home .body { margin: 28px -8px 0; padding: 8px 16px 24px; } }
+
+.wa-card{display:flex;flex-direction:column;align-items:center;gap:8px;max-width:360px;margin:12px auto 4px;padding:22px 20px;background:#fff;border-radius:18px;box-shadow:0 2px 12px rgba(60,30,20,.12);text-align:center;text-decoration:none;color:inherit}
+.wa-card img{width:84px;height:84px;border-radius:50%}
+.wa-card strong{font-size:1.2em}
+.wa-card span{color:#6b6b6b}
+.wa-card em{display:block;width:100%;margin-top:6px;padding:11px 16px;box-sizing:border-box;border-radius:999px;background:#1f9d55;color:#fff;font-style:normal;font-weight:700}
